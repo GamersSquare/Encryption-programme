@@ -1,0 +1,29 @@
+import time
+
+x = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
+    ,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' ']
+
+y = ['#','@','!','^','$','&','(','_','=','+','\'','\"',')','*','[','{','%',']','}','-','4','6','1','3','7','a'
+    ,'c','y','w','x','u','9','0','2','æ','Ø','§','±','i','5','o',':',';','<','>','?','r','R','P','W','ô','£','÷']
+
+text = input("Enter the sentence you want to encrypt: ")
+encryption = ""
+
+for letter in text:
+    index = x.index(letter)
+    encryption += y[index]
+print(encryption)
+
+print("if you want to dencrypt click y and any button if not")
+k = input()
+if k == "y":
+    ecr = input("Enter the encrypted sentence: ")
+    tex = ""
+    for let in ecr:
+        ind = y.index(let)
+        tex += x[ind]
+    print(tex)
+else:
+    print("The encryption is done")
+
+time.sleep(120)
